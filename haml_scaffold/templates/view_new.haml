@@ -1,0 +1,7 @@
+%h1 New <%= singular_name %>
+
+- form_tag :action => 'create<%= @suffix %>' do 
+  = render :partial => 'form'
+  = submit_tag "Create"
+
+= link_to 'Back', :action => 'list<%= suffix %>'

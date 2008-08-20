@@ -1,0 +1,6 @@
+<% for attribute in attributes -%>
+%p
+  %b <%= attribute.column.human_name %>
+  %br/
+  = f.<%= attribute.field_type %> :<%= attribute.name %>
+<% end -%> 
