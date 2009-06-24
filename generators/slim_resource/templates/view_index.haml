@@ -1,0 +1,10 @@
+%h2 <%= plural_name %>
+
+%table
+  %tr
+  <% for attribute in attributes -%>
+  %th <%= attribute.column.human_name %>
+  <% end -%>
+= render :partial => "<%= singular_name %>", :collection => @<%= plural_name %> 
+
+= link_to "add <%= singular_name %>", new_object_path 

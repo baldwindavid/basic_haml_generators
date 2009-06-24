@@ -1,0 +1,8 @@
+%h2 New <%= singular_name %>
+
+= error_messages_for :<%= singular_name %>
+- form_for :<%= singular_name %>, :url => collection_path do |f|
+  = render :partial => "<%= singular_name %>_form", :locals => {:f => f}
+  = f.buttons
+  
+= link_to "Back", collection_path 
