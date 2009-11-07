@@ -2,10 +2,10 @@
 
 = error_messages_for :<%= singular_name %>
 
-- semantic_form_for :<%= singular_name %>, :url => object_path(@<%= singular_name %>), :html => {:method => :put} do |f|
+- semantic_form_for :<%= singular_name %>, :url => resource_path(@<%= singular_name %>), :html => {:method => :put} do |f|
   = render :partial => "<%= singular_name %>_form", :locals => {:f => f} 
   = f.buttons
   
-= link_to "Show", object_path(@<%= singular_name %>) 
+= link_to "Show", resource_path(@<%= singular_name %>) 
 \|
 = link_to "Back", collection_path

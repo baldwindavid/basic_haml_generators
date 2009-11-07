@@ -1,8 +1,17 @@
 class <%= controller_class_name %>Controller < ApplicationController
 
-  resource_controller
+  inherit_resources
   
-  create.wants.html { redirect_to collection_url }
-  update.wants.html { redirect_to edit_object_url }
+  def create
+    create!{ edit_resource_url }
+  end
+
+  def update
+    update!{ edit_resource_url }
+  end
+  
+  def destroy
+    destroy!{ collection_url }
+  end
 
 end
