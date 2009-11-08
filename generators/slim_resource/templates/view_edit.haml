@@ -2,7 +2,7 @@
 
 = error_messages_for :<%= singular_name %>
 
-- semantic_form_for :<%= singular_name %>, :url => resource_path(@<%= singular_name %>), :html => {:method => :put} do |f|
+- semantic_form_for resource, :url => resource_path(resource), :html => {:method => :put} do |f|
   = render :partial => "<%= singular_name %>_form", :locals => {:f => f} 
   = f.buttons
   
